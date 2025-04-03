@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        AZURE_CREDENTIALS ID = credentials('azure-service-principal-demo1')
+        AZURE_CREDENTIALS_ID = credentials('azure-service-principal-demo1')
         RESOURCE_GROUP = 'rg-jenkins-demo1'
         APP_SERVICE_NAME = 'webapijenkinsdemo1'
     }
