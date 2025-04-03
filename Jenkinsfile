@@ -1,12 +1,14 @@
 pipeline {
     agent any
     environment {
-        AZURE_CREDENTIALS = credentials('azure-service-principal')
+        AZURE_CREDENTIALS ID = credentials('azure-service-principal')
+        RESOURCE_GROUP = 'rg-jenkins-demo1'
+        APP_SERVICE_NAME = 'webapijenkinsdemo1'
     }
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Atishay-Jain01/Jenkins-demo1.git'
+                git branch:master 'https://github.com/Atishay-Jain01/Jenkins-demo1.git'
             }
         }
         stage('Build') {
